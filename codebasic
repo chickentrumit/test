@@ -82,11 +82,25 @@ void xuatsnt(int a[][100],int n,int m){
 		p("\n");
 	}
 }
+void timvitrix(int a[][100],int n,int m,int x){
+	p("xuat so nguyen to và vi tri so nguyen to la\n");
+	for(int i=0;i<n;++i){
+		for(int j=0;j<n;++j){
+			if(a[i][j]==x){
+				p("a[%d][%d]:%d\t",i,j,a[i][j]);
+			}
+		}
+		p("\n");
+	}
+}
 main(){
-	int n,m;
+	int n,m,x;
 	nhapdongvacot(n,m);
 	int a[n][100];
 	nhap(a,n,m);
 	xuatsochan(a,n,m);
 	xuatsnt(a,n,m);
+	printf("nhap x:");
+	s("%d",&x);
+	timvitrix(a,n,m,x);
 }
